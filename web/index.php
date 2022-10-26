@@ -16,6 +16,10 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 // Our web handlers
+$app->get('/home', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('Home.html');
+});
 
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
