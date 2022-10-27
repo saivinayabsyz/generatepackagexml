@@ -2,21 +2,27 @@
 <html>
   <head>
 <style>
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-item + .flex-item {
+  margin-left: 10px;
+}
+
 .button {
-  background-color: #4CAF50; /* Green */
+  margin-top: 15px;
+  background-color: #0066FF;
   border: none;
   color: white;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
-   margin-top: 20%;
-  margin-left: 40%;
-  padding: 10px;
 }
-
-.button2 {background-color: #008CBA;} /* Blue */
 
 </style>
 </head>
@@ -31,9 +37,10 @@ function handleProdClick() {
 }
 </script>
 
+<div class="flex">
 
-
-<button class="button button2" onclick="handleProdClick()">Login to Production</button>
-  <button class="button button2" onclick="handleSandboxClick()">Login to Sandbox</button>
+<button class="button" onclick="handleProdClick()">Login to Production</button>
+  <button class="button" onclick="handleSandboxClick()">Login to Sandbox</button>
+  </div>
 </body>
 </html>
