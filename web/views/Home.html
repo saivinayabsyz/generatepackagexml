@@ -6,12 +6,12 @@
 
  function newElement()
 {
-  var k = window.location.href.replace("https://generatepackagexml.herokuapp.com/home","");
+  var k = window.location.href.replace("https://generatepackagexmlstage.herokuapp.com/home","");
  document.getElementById('myIframe').src="https://vinaypd2-dev-ed.my.salesforce-sites.com"+k;
 }
   function iframeDidLoad() {
    if(!document.getElementById('myIframe').src.includes("code")){
-    var k = window.location.href.replace("https://generatepackagexml.herokuapp.com/home","");
+    var k = window.location.href.replace("https://generatepackagexmlstage.herokuapp.com/home","");
  //  document.getElementById('myIframe').src="https://vinaypd2-dev-ed.my.salesforce-sites.com"+k;
    }
 }
