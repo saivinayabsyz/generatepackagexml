@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
- Home
+ 
 <body  onload="newElement()">
  <script>
 
  function newElement()
 {
   var k = window.location.href.replace("https://generatepackagexml.herokuapp.com/home","");
- document.getElementById('myIframe').src="https://vinay9-dev-ed.develop.my.salesforce-sites.com"+k;
+ document.getElementById('myIframe').src="https://vinaypd2-dev-ed.my.salesforce-sites.com"+k;
 }
   function iframeDidLoad() {
    if(!document.getElementById('myIframe').src.includes("code")){
     var k = window.location.href.replace("https://generatepackagexml.herokuapp.com/home","");
+ //  document.getElementById('myIframe').src="https://vinaypd2-dev-ed.my.salesforce-sites.com"+k;
    }
 }
 
  </script>
 
 
-<iframe id="myIframe" src="" width="100%" height="800px" title="generate package xml" style="border:none;" onLoad="iframeDidLoad();">
+<iframe id="myIframe" src="" width="100%" height="800px" title="W3Schools Free Online Web Tutorials" style="border:none;" onLoad="iframeDidLoad();">
 </iframe>
 
 </body>
