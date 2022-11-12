@@ -1,49 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-<style>
-.flex {
-  display: flex;
-  justify-content: center;
-}
-
-.flex-item + .flex-item {
-  margin-left: 10px;
-}
-
-.button {
-  margin-top: 15px;
-  background-color:#2574A9;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-</style>
-</head>
-<body>
-<script>
-function handleProdClick() {
-         window.location.href = "https://login.salesforce.com/services/oauth2/authorize?response_type=code&client_id=3MVG9G9pzCUSkzZutZiJKq9najG6mgz4cZ1eorM1b2CkHwmhTit2qE8IYewU80s9vIzBTzg5eYR1L4spKG0Nb&redirect_uri=https://generatepackagexmlstage.herokuapp.com/home&response_type=code&state=production";
-   }
-  function handleSandboxClick() {
-      window.location.href = "https://test.salesforce.com/services/oauth2/authorize?response_type=code&client_id=3MVG9G9pzCUSkzZutZiJKq9najG6mgz4cZ1eorM1b2CkHwmhTit2qE8IYewU80s9vIzBTzg5eYR1L4spKG0Nb&redirect_uri=https://generatepackagexmlstage.herokuapp.com/home&response_type=code&state=sandbox";
-  
-}
-</script>
-
-<div class="flex">
-<div class="flex-item">
-<button class="button" onclick="handleProdClick()">Login to Production</button>
-  </div>
-  <div class="flex-item">
-  <button class="button" onclick="handleSandboxClick()">Login to salesforce with OAuth</button>
-     </div>
-  </div>
-</body>
-</html>
+<div id="lightning"></div>
+<script src="https://vinaypd2-dev-ed--c.vf.force.com/lightning/lightning.out.js"></script>
+ <script>
+    $Lightning.use("c:GeneratepackageXMLAPP", function() {
+        $Lightning.createComponent("c:generatePackageXMLLWC",
+          { 
+          },
+          "LightningComponentid",
+          function(cmp) {
+             console.log('LWC Componenet added in VF page');
+          });
+    });
+    </script>
