@@ -1,49 +1,18 @@
-<!DOCTYPE html>
 <html>
-  <head>
-<style>
-.flex {
-  display: flex;
-  justify-content: center;
-}
-
-.flex-item + .flex-item {
-  margin-left: 10px;
-}
-
-.button {
-  margin-top: 15px;
-  background-color:#2574A9;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-</style>
-</head>
-<body>
+ <div id="lightning"></div>
+<script src="https://vinay9-dev-ed.my.salesforce-sites.com/lightning/lightning.out.js"></script>
 <script>
-function handleProdClick() {
-         window.location.href = "https://login.salesforce.com/services/oauth2/authorize?response_type=code&client_id=3MVG9G9pzCUSkzZutZiJKq9najF4kafLclhQYe0hNDiwq3l5Dah6YsW2ehhquhIqBu.VcLYk6WTcohku_b2Sb&redirect_uri=https://generatepackagexml.herokuapp.com/home&response_type=code&state=production";
-   }
-  function handleSandboxClick() {
-      window.location.href = "https://test.salesforce.com/services/oauth2/authorize?response_type=code&client_id=3MVG9G9pzCUSkzZutZiJKq9najF4kafLclhQYe0hNDiwq3l5Dah6YsW2ehhquhIqBu.VcLYk6WTcohku_b2Sb&redirect_uri=https://generatepackagexml.herokuapp.com/home&response_type=code&state=sandbox";
-  
-}
+     $Lightning.use("c:GeneratepackageXMLAPP", function() {
+        $Lightning.createComponent("c:generatePackageXMLLWC", {
+            },
+              "lightning",
+              function(cmp) {
+                console.log("LWC component was created");
+                // do some stuff
+              }
+          );
+        },
+       'https://vinay9-dev-ed.my.salesforce-sites.com/'
+      );
 </script>
-
-<div class="flex">
-<div class="flex-item">
-<button class="button" onclick="handleProdClick()">Login to Production</button>
-  </div>
-  <div class="flex-item">
-  <button class="button" onclick="handleSandboxClick()">Login to salesforce with OAuth</button>
-     </div>
-  </div>
-</body>
 </html>
